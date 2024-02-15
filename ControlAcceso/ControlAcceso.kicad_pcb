@@ -40,7 +40,7 @@
   (setup
     (pad_to_mask_clearance 0)
     (pcbplotparams
-      (layerselection 0x00010fc_ffffffff)
+      (layerselection 0x0001000_ffffffff)
       (plot_on_all_layers_selection 0x0000000_00000000)
       (disableapertmacros false)
       (usegerberextensions false)
@@ -225,7 +225,7 @@
     (pad "2" thru_hole circle (at 2.54 0) (size 1.8 1.8) (drill 0.9) (layers "*.Cu" "*.Mask")
       (net 25 "Net-(D2-A)") (pinfunction "A") (pintype "passive") (tstamp b0742f7c-58e2-45a6-a211-63fb7eb5f996))
     (model "${KICAD6_3DMODEL_DIR}/LED_THT.3dshapes/LED_D5.0mm.wrl"
-      (offset (xyz 0 0 0))
+      (offset (xyz 0 0 -3))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
@@ -295,7 +295,7 @@
     (pad "2" thru_hole circle (at 2.54 0) (size 1.8 1.8) (drill 0.9) (layers "*.Cu" "*.Mask")
       (net 24 "Net-(D1-A)") (pinfunction "A") (pintype "passive") (tstamp 82934345-3ba2-44b1-a66f-09f681cde23f))
     (model "${KICAD6_3DMODEL_DIR}/LED_THT.3dshapes/LED_D5.0mm.wrl"
-      (offset (xyz 0 0 0))
+      (offset (xyz 0 0 -3))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
@@ -464,10 +464,10 @@
       (net 4 "GND") (pinfunction "GND") (pintype "power_in") (tstamp eb7d3b22-deeb-4dc6-a714-b6c0c4639acf))
     (pad "30" thru_hole oval (at 15.24 0 180) (size 1.6 1.6) (drill 1) (layers "*.Cu" "*.Mask")
       (net 23 "VIN") (pinfunction "VIN") (pintype "power_in") (tstamp 934dd3be-4419-4742-883d-186333d692f1))
-    (model "C:/Users/hjest/Downloads/arduino-nano-33-iot-1.snapshot.3/Arduino Nano 33 IoT.stp"
-      (offset (xyz 7.5 -17.5 0.5))
+    (model "C:/Users/RED-TECNOPARQUE/Downloads/arduino-nano-33-iot-1.snapshot.3/Arduino Nano 33 IoT.stp"
+      (opacity 0.9900)      (offset (xyz 7.5 -17.5 1.5))
       (scale (xyz 1 1 1))
-      (rotate (xyz -90 0 0))
+      (rotate (xyz 90 -180 -180))
     )
   )
 
@@ -562,8 +562,8 @@
       (net 21 "+5V") (pinfunction "VCC") (pintype "bidirectional") (solder_mask_margin 0.102) (tstamp a1503397-fbdc-456e-9d4b-89835e96389c))
     (pad "VCC1" thru_hole circle (at 13.97 7.62 90) (size 1.108 1.108) (drill 0.6) (layers "*.Cu" "*.Mask")
       (net 28 "unconnected-(RDM1-PadVCC1)") (pinfunction "VCC1") (pintype "bidirectional") (solder_mask_margin 0.102) (tstamp a3d6dd1d-7ae8-4f82-825a-379edfb7c946))
-    (model "C:/Users/hjest/Downloads/RDM6300/RDM6300.step"
-      (offset (xyz 0 0 5))
+    (model "C:/Users/RED-TECNOPARQUE/Downloads/rdm6300-4.snapshot.1/RDM6300.step"
+      (offset (xyz 0 0 4.5))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 90))
     )
@@ -696,8 +696,8 @@
       (net 4 "GND") (pinfunction "GND") (pintype "power_in") (tstamp 673dd887-8df9-4b9e-9ba0-36c2b3aed3a1))
     (pad "3" thru_hole oval (at 5.08 0 90) (size 1.905 2) (drill 1.1) (layers "*.Cu" "*.Mask")
       (net 23 "VIN") (pinfunction "VO") (pintype "power_out") (tstamp 9c458916-cfb8-4a43-8342-d7595cf2bff2))
-    (model "C:/Users/hjest/Downloads/7805-3.snapshot.1/7805BC/7805BC.stp"
-      (offset (xyz 2.5 9 0.5))
+    (model "C:/Users/RED-TECNOPARQUE/Downloads/7805-3.snapshot.1/7805BC/7805BC.stp"
+      (offset (xyz 2.5 9 0))
       (scale (xyz 1 1 1))
       (rotate (xyz 0 0 0))
     )
@@ -1475,11 +1475,32 @@
   (gr_text "Sistema Control de Acceso" (at 241.3 74.93 90) (layer "F.SilkS") (tstamp 866b9a7f-d9c8-455f-9fa1-1e3156ff7ca3)
     (effects (font (size 1 1) (thickness 0.2) bold) (justify left bottom))
   )
+  (gr_text "+\n" (at 199.42 49.26) (layer "F.SilkS") (tstamp 94f7b437-6e35-414b-88ab-da4e0d4d07c3)
+    (effects (font (size 1.5 1.5) (thickness 0.3) bold) (justify left bottom mirror))
+  )
   (gr_text "nodo Pitalito" (at 199.119622 65.980851 90) (layer "F.SilkS") (tstamp a706990b-be48-4b78-8292-ed0125ae66f3)
     (effects (font (size 0.677407 0.609666) (thickness 0.084675)) (justify left bottom))
   )
   (gr_text "Linea Electrónica y Telecomunicaciones" (at 242.558 75.239757 90) (layer "F.SilkS") (tstamp c0249ccd-7293-418a-885e-de2bb166b2ae)
     (effects (font (size 0.7 0.7) (thickness 0.15)) (justify left bottom))
+  )
+  (dimension (type aligned) (layer "User.1") (tstamp 0666e4bc-1cbf-459d-8c33-93cdfb740ebc)
+    (pts (xy 235.36 35.6) (xy 235.4 96.58))
+    (height -24.775437)
+    (gr_text "60,9800 mm" (at 261.955432 66.072567 270.0375833) (layer "User.1") (tstamp 0666e4bc-1cbf-459d-8c33-93cdfb740ebc)
+      (effects (font (size 1.5 1.5) (thickness 0.3)))
+    )
+    (format (prefix "") (suffix "") (units 3) (units_format 1) (precision 4))
+    (style (thickness 0.2) (arrow_length 1.27) (text_position_mode 0) (extension_height 0.58642) (extension_offset 0.5) keep_text_aligned)
+  )
+  (dimension (type aligned) (layer "User.1") (tstamp 86f36216-050c-44dc-b76c-a98660f02a67)
+    (pts (xy 246.38 38.56) (xy 193.04 38.56))
+    (height 8.87)
+    (gr_text "53,3400 mm" (at 219.71 27.89) (layer "User.1") (tstamp 86f36216-050c-44dc-b76c-a98660f02a67)
+      (effects (font (size 1.5 1.5) (thickness 0.3)))
+    )
+    (format (prefix "") (suffix "") (units 3) (units_format 1) (precision 4))
+    (style (thickness 0.2) (arrow_length 1.27) (text_position_mode 0) (extension_height 0.58642) (extension_offset 0.5) keep_text_aligned)
   )
 
   (segment (start 223.874 36.576) (end 233.934 36.576) (width 0.5) (layer "B.Cu") (net 4) (tstamp 074cb6f1-2186-4771-acf5-964eba955014))
