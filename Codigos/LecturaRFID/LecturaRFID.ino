@@ -54,7 +54,7 @@ void loop() {
       // Compara el ID del tag con los almacenados en la EEPROM
       if (compararConEEPROM(tagID)) {
         // Si coincide, activa la salida en el pin D4
-        digitalWrite(pinSalidaD4, HIGH);
+        digitalWrite(pinSalidaD4, LOW);
 
         // Enciende el LED azul
         digitalWrite(pinLedAzul, HIGH);
@@ -64,7 +64,7 @@ void loop() {
 
         // Apaga el LED azul y la salida D4
         digitalWrite(pinLedAzul, LOW);
-        digitalWrite(pinSalidaD4, LOW);
+        digitalWrite(pinSalidaD4, HIGH);
       }
     }
   }
