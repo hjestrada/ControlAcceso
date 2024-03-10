@@ -22,7 +22,7 @@ int SalidaRele = 4;
 long tag;
 
 void setup() {
-  Serial.begin(9600);
+ // Serial.begin(9600);
   ssrfid.begin(9600);
   ssrfid.listen();
   pinMode(SalidaRele, OUTPUT);
@@ -71,7 +71,7 @@ void loop() {
             }
           }
         } else {
-          Serial.println("Error: Tag duplicado detectado.");
+         Serial.println("Error: Tag duplicado detectado.");
           forceReset();
         }
 
@@ -90,7 +90,7 @@ long extract_tag() {
   uint8_t *msg_data_tag = msg_data + 2;
   long tag = hexstr_to_value(msg_data_tag, DATA_TAG_SIZE);
   // Imprime el mensaje enviado desde RDM630/RDM6300
-  Serial.print("Etiqueta extraída: ");
+Serial.print("Etiqueta extraída: ");
   Serial.println(tag);
   return tag;  // Devuelve la etiqueta
 }
@@ -121,8 +121,8 @@ void activar_salida() {
   // Función para activar la salida (ajusta según tus necesidades)
   digitalWrite(SalidaRele, LOW);
   digitalWrite(SalidaLedAzul, HIGH);
-  Serial.println("Abriendo Puerta");
-  delay(5000);
+ Serial.println("Abriendo Puerta");
+  delay(10000);
   digitalWrite(SalidaRele, HIGH);
   digitalWrite(SalidaLedAzul, LOW);
   Serial.println("Cerrando Puerta");
