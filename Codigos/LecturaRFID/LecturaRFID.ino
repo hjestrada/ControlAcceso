@@ -2,7 +2,7 @@
 #include <EEPROM.h>
 
 // Define los pines RX y TX para la comunicación serial virtual
-SoftwareSerial RFIDserial(10, 11); // RX, TX
+SoftwareSerial RFIDserial(11, 10); // RX, TX
 
 // Pines para LEDs rojo y azul
 const int pinLedRojo = 13;
